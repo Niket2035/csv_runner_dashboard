@@ -3,7 +3,7 @@
 
 **Challenge:** FSD Intern Assignment — CSV Runner Dashboard
 
-**What I Built:**A responsive and interactive web app where users can:
+What I Built:A responsive and interactive web app where users can:
 
 *   Upload a .csv file of running data (date, person, miles run).
     
@@ -19,8 +19,6 @@
 **Tech Stack:**
 
 *   **Next.js 14** (App Router)
-    
-*   **TypeScript**
     
 *   **shadcn/ui** for UI components
     
@@ -48,22 +46,25 @@
 🧰 3. Prerequisites
 -------------------
 
-ToolVersionPurposeNode.js≥ 18.xRequired to run Next.jsnpm≥ 9.xFor package managementGitOptionalFor version controlBrowserLatest Chrome / EdgeFor viewing app
+| Tool    | Version              | Purpose                 |
+| ------- | -------------------- | ----------------------- |
+| Node.js | ≥ 18.x               | Required to run Next.js |
+| npm     | ≥ 9.x                | For package management  |
+| Git     | Optional             | For version control     |
+| Browser | Latest Chrome / Edge | For viewing app         |
+
 
 🪜 4. Setup Instructions
 ------------------------
 
 ### 🔹 Installation
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   git clone https://github.com//csv-runner-dashboard.git  cd csv-runner-dashboard  npm install   `
+* `git clone https://github.com/<your-username>/csv-runner-dashboard.git`.
+* `cd csv-runner-dashboard`.
+* `npm install`.
+* `npm run dev`.
 
-### 🔹 Environment Variables
-
-No external API keys are needed for this project.Still, you can create a placeholder file:
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   cp .env.example .env   `
-
-### 🔹 Seeding Data (Optional)
+### 🔹 Seeding Data 
 
 You can test using sample CSV files provided in the /public folder:
 
@@ -79,7 +80,7 @@ You can test using sample CSV files provided in the /public folder:
 
 ### Start the development server:
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   npm run dev   `
+` npm run dev`
 
 Visit:👉 http://localhost:3000
 
@@ -98,18 +99,10 @@ TaskHow to Verify**CSV Upload & Validation**Upload sample.csv → data and chart
     
 *   Clean UI built with **shadcn/ui** components (Button, Input, Alert, Card)
     
-*   Faint green theme for a relaxing visual experience
-    
 *   Responsive design for all screen sizes
-    
-*   Accessibility support (keyboard focus, proper contrast)
-    
-*   Light/Dark mode supported automatically
     
 
 ### ⚠️ Limitations
-
-*   No data persistence (refresh clears uploaded data)
     
 *   Only handles small CSV files (not optimized for very large datasets)
     
@@ -130,9 +123,6 @@ TaskHow to Verify**CSV Upload & Validation**Upload sample.csv → data and chart
 🧠 7. Notes on Architecture
 ---------------------------
 
-### 📁 Folder Structure
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   csv-runner-dashboard/  │  ├── app/  │   ├── page.tsx                # Main dashboard page  │   ├── components/  │   │   ├── CsvUploader.tsx     # Upload + validation logic  │   │   ├── MetricsCard.tsx     # Displays overall metrics  │   │   └── ChartsSection.tsx   # Renders shadcn-styled charts  │  ├── components/ui/              # shadcn/ui reusable components  │   ├── button.tsx  │   ├── input.tsx  │   ├── alert.tsx  │   ├── card.tsx  │   └── chart.tsx  │  ├── public/  │   ├── sample.csv  │   ├── invalid_headers.csv  │   └── empty.csv  │  ├── .env.example  ├── README.md  ├── package.json  └── tailwind.config.js   `
 
 ### 🧩 State & Data Flow
 
@@ -146,12 +136,21 @@ Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQL
 ♿ 8. Accessibility & UI
 -----------------------
 
-FeatureDescription**Focus Management**All inputs and buttons are keyboard-accessible**Labels**Buttons and alerts use clear text labels**Contrast**Faint green tones but with sufficient contrast in dark/light themes**Spacing & Typography**Used Tailwind’s space-y and text-lg for clean layout**Responsiveness**Grid + Flexbox ensure smooth scaling**Alert Feedback**Error alerts appear clearly when invalid CSV is uploaded
+| Feature                  | Description                                                         |
+| ------------------------ | ------------------------------------------------------------------- |
+| **Focus Management**     | All inputs and buttons are keyboard-accessible                      |
+| **Labels**               | Buttons and alerts use clear text labels                            |
+| **Contrast**             | Faint green tones but with sufficient contrast in dark/light themes |
+| **Spacing & Typography** | Used Tailwind’s `space-y` and `text-lg` for clean layout            |
+| **Responsiveness**       | Grid + Flexbox ensure smooth scaling                                |
+| **Alert Feedback**       | Error alerts appear clearly when invalid CSV is uploaded            |
 
-🖼️ UI Preview (Light Mode)
+
+🖼️ UI Preview 
 ---------------------------
 
-🟢 Faint green gradient background🟩 Upload section centered with glass-card style📊 Bar & Line charts with pastel green theme⚠️ Red alert for invalid CSV
+<img width="1896" height="1109" alt="image" src="https://github.com/user-attachments/assets/1bc48bbf-d52b-48c7-9d8c-3d4dc18e6634" />
+
 
 💚 Credits
 ----------
